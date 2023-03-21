@@ -1,0 +1,21 @@
+{
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "semi": true,
+  "trailingComma": "es5",
+  "printWidth": 100,
+  "endOfLine": "auto",
+  "importOrder": [
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/_app/(.*)$",
+    "^@/entities/(.*)$",
+    "^@/features/(.*)$",
+    "^@/pages/(.*)$",
+    "^@/shared/(.*)$",
+    "^@/widgets/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
