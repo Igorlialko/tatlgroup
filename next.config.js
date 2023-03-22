@@ -6,10 +6,10 @@ const nextConfig = {
     version: shortid.generate(),
   },
   reactStrictMode: false,
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
+  // i18n: {
+  //   locales: ['en'],
+  //   defaultLocale: 'en',
+  // },
   async headers() {
     return [
       {

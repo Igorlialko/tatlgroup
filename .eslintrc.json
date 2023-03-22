@@ -7,7 +7,8 @@
     "airbnb",
     "prettier",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,7 +18,12 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier", "unused-imports", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "prettier",
+    "unused-imports",
+    "@typescript-eslint"
+  ],
   "rules": {
     "unused-imports/no-unused-imports": "error",
     "no-restricted-syntax": "warn",
@@ -50,7 +56,10 @@
     "no-underscore-dangle": "off",
     "no-unused-vars": [
       "warn",
-      { "argsIgnorePattern": "^_*$", "destructuredArrayIgnorePattern": "^_" }
+      {
+        "argsIgnorePattern": "^_*$",
+        "destructuredArrayIgnorePattern": "^_"
+      }
     ],
     "no-console": "off",
     "func-names": "off",

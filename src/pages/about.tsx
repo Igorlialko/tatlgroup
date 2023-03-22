@@ -1,15 +1,15 @@
 import Head from 'next/head';
 
-import { HomePage } from '@/build-pages/home';
+import { AboutPage } from '@/build-pages/about';
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>About</title>
         <meta name="description" content="next app" />
       </Head>
-      <HomePage />
+      <AboutPage />
     </>
   );
 }

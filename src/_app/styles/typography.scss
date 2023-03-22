@@ -1,0 +1,98 @@
+@import 'src/_app/styles/variables';
+
+h1 {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 117%;
+}
+
+h2 {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+}
+
+h3 {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 110%;
+}
+
+button {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 135%;
+}
+
+.link {
+  color: var(--icons-blue);
+  @media (hover: hover) {
+    &:hover,
+    &:focus-visible {
+      color: #69a2ff;
+    }
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+.big{
+  font-size: 100px;
+}
+
+.body1 {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.body2 {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.body3 {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+.body4 {
+  font-family: var(--fontFamily);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+}
+
+@media (max-width: $md3) {
+  h1 {
+    font-size: 24px;
+    line-height: 110%;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
