@@ -20,6 +20,17 @@ export const CommonInclusions = ({ children }) => {
     };
   }, []);
 
+  const links = [
+    {
+      text: 'Home',
+      href: '/',
+    },
+    {
+      text: 'About',
+      href: '/about',
+    },
+  ];
+
   return (
     <main className="main">
       <Head>
@@ -94,13 +105,18 @@ export const CommonInclusions = ({ children }) => {
           href="/fonts/inter/inter-v12-latin-700.woff2"
         />
       </Head>
-      <header className={s.section}>
-        <Link href="/" className="link">
-          Home
-        </Link>
-        <Link href="/about" className="link">
-          About
-        </Link>
+      <header>
+        <nav>
+          <ul className={s.section}>
+            {links.map(({ text, href }) => (
+              <li key={href}>
+                <Link href={href} className="link">
+                  {text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </header>
       {children}
       <footer className={s.section}>

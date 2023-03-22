@@ -18,12 +18,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "prettier",
-    "unused-imports",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "prettier", "unused-imports", "@typescript-eslint"],
   "rules": {
     "unused-imports/no-unused-imports": "error",
     "no-restricted-syntax": "warn",

@@ -28,12 +28,16 @@ interface IGetRates {
   Quantity: number;
 }
 
+interface ITriggerRate {
+  SchoolboyId: number;
+  ColumnId: number;
+}
+
 export const studentsApi = createApi({
   reducerPath: 'studentsApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.NEXT_PUBLIC_BASE_API_URL || 'https://localhost:5000/api/',
+    baseUrl: process.env.NEXT_PUBLIC_BASE_API_URL || 'http://localhost:5000/api/',
   }),
-  tagTypes: ['Rates'],
   endpoints: (build) => ({
     getStudents: build.query<IGetStudents, void>({
       query: () => 'Schoolboy',
@@ -49,7 +53,7 @@ export const studentsApi = createApi({
         },
       }),
     }),
-    createRate: build.mutation<null, { SchoolboyId: number; ColumnId: number }>({
+    createRate: build.mutation<null, ITriggerRate>({
       query: ({ SchoolboyId, ColumnId }) => ({
         url: 'Rate',
         method: 'POST',
@@ -60,7 +64,7 @@ export const studentsApi = createApi({
         },
       }),
     }),
-    deleteRate: build.mutation<null, { SchoolboyId: number; ColumnId: number }>({
+    deleteRate: build.mutation<null, ITriggerRate>({
       query: ({ SchoolboyId, ColumnId }) => ({
         url: 'UnRate',
         method: 'POST',
