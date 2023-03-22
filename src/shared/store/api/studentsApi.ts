@@ -36,7 +36,7 @@ interface ITriggerRate {
 export const studentsApi = createApi({
   reducerPath: 'studentsApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.NEXT_PUBLIC_BASE_API_URL || 'http://localhost:5000/api/',
+    baseUrl: process.env.NEXT_PUBLIC_BASE_API_URL || 'http://94.131.246.109:5555/v1/2/',
   }),
   endpoints: (build) => ({
     getStudents: build.query<IGetStudents, void>({
