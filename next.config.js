@@ -19,8 +19,12 @@ const nextConfig = {
             value: 'enforce, max-age=86400',
           },
           {
+            key: 'crossdomain',
+            value: 'true'
+          },
+          { 
             key: 'Access-Control-Allow-Origin',
-            value: 'no-cors',
+            value: '*',
           },
           {
             key: 'X-Content-Type-Options',
