@@ -37,6 +37,16 @@ export const studentsApi = createApi({
   reducerPath: 'studentsApi',
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_BASE_API_URL || 'http://94.131.246.109:5555/v1/2/',
+    prepareHeaders: (headers) => {
+      headers.set('Access-Control-Allow-Credentials', 'true');
+      headers.set('Access-Control-Allow-Origin', '*');
+      headers.set('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+      headers.set(
+        'Access-Control-Allow-Headers',
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+      );
+      return headers;
+    },
   }),
   endpoints: (build) => ({
     getStudents: build.query<IGetStudents, void>({
